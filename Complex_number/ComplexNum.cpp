@@ -44,7 +44,7 @@ ComplexNum ComplexNum::operator/(ComplexNum const &a)
     ComplexNum n = ComplexNum(this->rez, this->imz);//костыль1
     ComplexNum x = ComplexNum(a.rez, -a.imz);//костыль2
     n = n*x;
-    n.imz/=denomerator;
+    n.imz/=denomerator;//нет проверки деления на 0
     n.rez/=denomerator;
     return n;
 }
